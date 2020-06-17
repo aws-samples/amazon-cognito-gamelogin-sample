@@ -3,7 +3,7 @@ A basic demo of logging in to a game server with Amazon Cognito. The client and 
 
 # Requirements
 - An AWS account with access to Amazon Cognito: https://aws.amazon.com/getting-started/
-- Microsoft Visual Studio 2017 or higher (any edition): https://visualstudio.microsoft.com/
+- Microsoft Visual Studio 2017: https://visualstudio.microsoft.com/vs/older-downloads/
 
 # Contents
 <pre>
@@ -21,6 +21,9 @@ A basic demo of logging in to a game server with Amazon Cognito. The client and 
 # For more information or questions
 - This steps in this file are condensed from the article found here: https://aws.amazon.com/blogs/gametech/how-to-set-up-player-authentication-with-amazon-cognito
 - Please contact gametech@amazon.com for any comments or requests regarding this content.
+
+# Visual Studio 2019 Note
+Unfortunately the provided demo won’t compile directly in Visual Studio 2019, unless you have the Visual Studio 2017 platform toolset installed. The demo downloads the AWS SDK for C++ that’s available on NuGet, and the libraries are not compiled for the Visual Studio 2019 tooling. Refer to the instructions for building the AWS SDK for C++ in the developer guide here https://docs.aws.amazon.com/sdk-for-cpp/v1/developer-guide/setup.html. You’ll then need to configure your projects to find the include and library files in the SDK.
 
 ## License Summary
 
